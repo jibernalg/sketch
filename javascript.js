@@ -1,16 +1,16 @@
 function createPixels(size) {
     let container = document.querySelector(".container");
-    for (currentPixel = 0; currentPixel < size * size; currentPixel++) {
+    for (i = 0; i < size * size; i++) {
       let pixel = document.createElement("div");
       pixel.setAttribute("class", "pixel");
-      pixel.addEventListener("pointerover", addRgb);
+      pixel.addEventListener("pointermove", pintar);
       container.appendChild(pixel);
     }
   }
   
   createPixels(16);
   
-  function addRgb(e) {
+  function pintar(e) {
     e.target.style = `background-color: red`;
     
 
